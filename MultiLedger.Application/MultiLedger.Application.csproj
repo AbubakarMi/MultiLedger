@@ -41,13 +41,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\AttendanceDto.cs" />
+    <Compile Include="DTOs\BranchDto.cs" />
+    <Compile Include="DTOs\ReportDto.cs" />
+    <Compile Include="DTOs\StaffDto.cs" />
+    <Compile Include="DTOs\TransactionDto.cs" />
+    <Compile Include="DTOs\UserDto.cs" />
+    <Compile Include="Features\Auth\LoginCommand.cs" />
+    <Compile Include="Features\Auth\LoginCommandHandler.cs" />
+    <Compile Include="Features\Auth\RegisterUserCommand.cs" />
+    <Compile Include="Features\Auth\RegisterUserCommandHandler.cs" />
+    <Compile Include="Features\Branches\AddStaffCommand.cs" />
+    <Compile Include="Features\Branches\AddStaffCommandHandler.cs" />
+    <Compile Include="Features\Branches\GetStaffByIdQuery.cs" />
+    <Compile Include="Features\Branches\GetStaffByIdQueryHandler.cs" />
+    <Compile Include="Features\Finance\GetInvoicesQuery.cs" />
+    <Compile Include="Features\Finance\GetInvoicesQueryHandler.cs" />
+    <Compile Include="Features\Finance\RecordTransactionCommand.cs" />
+    <Compile Include="Features\Finance\RecordTransactionCommandHandler.cs" />
+    <Compile Include="Features\Reports\GenerateReportCommand.cs" />
+    <Compile Include="Features\Reports\GenerateReportCommandHandler.cs" />
+    <Compile Include="Interfaces\IAuthService.cs" />
+    <Compile Include="Interfaces\IBranchRepository.cs" />
+    <Compile Include="Interfaces\IFinanceRepository.cs" />
+    <Compile Include="Interfaces\IReportService.cs" />
+    <Compile Include="Interfaces\IStaffRepository.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AnomalyDetectionService.cs" />
+    <Compile Include="Services\ReportGenerator.cs" />
+    <Compile Include="Validators\AddStaffCommandValidator.cs" />
+    <Compile Include="Validators\LoginCommandValidator.cs" />
+    <Compile Include="Validators\RecordTransactionCommandValidator.cs" />
+    <Compile Include="Validators\RegisterUserCommandValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MultiLedger.Domain\MultiLedger.Domain.csproj">
       <Project>{d013ef56-88c5-4518-b169-96cdae8e7ad8}</Project>
       <Name>MultiLedger.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\MultiLedger.Application.dll" />
+    <Content Include="bin\Debug\MultiLedger.Application.pdb" />
+    <Content Include="bin\Debug\MultiLedger.Domain.dll" />
+    <Content Include="bin\Debug\MultiLedger.Domain.pdb" />
+    <Content Include="bin\Release\MultiLedger.Application.dll" />
+    <Content Include="bin\Release\MultiLedger.Application.pdb" />
+    <Content Include="bin\Release\MultiLedger.Domain.dll" />
+    <Content Include="bin\Release\MultiLedger.Domain.pdb" />
+    <Content Include="obj\Debug\MultiLedger.Application.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\MultiLedger.Application.dll" />
+    <Content Include="obj\Debug\MultiLedger.Application.pdb" />
+    <Content Include="obj\Release\MultiLedger.Application.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\MultiLedger.Application.dll" />
+    <Content Include="obj\Release\MultiLedger.Application.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\MultiLed.FD1CA05F.Up2Date" />
+    <None Include="obj\Debug\MultiLedger.Application.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\MultiLedger.Application.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\MultiLed.FD1CA05F.Up2Date" />
+    <None Include="obj\Release\MultiLedger.Application.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\MultiLedger.Application.csproj.CoreCompileInputs.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
