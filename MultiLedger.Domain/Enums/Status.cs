@@ -8,5 +8,6 @@ namespace MultiLedger.Domain.Enums
 {
     class Status
     {
+        public Status Active { get; internal set; }
     }
 }
