@@ -6,28 +6,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 // Entities/User.cs
-namespace MultiLedger.Domain.Entities;
-
-public class User
+namespace MultiLedger.Domain.Entities
 {
-    public Guid Id { get; private set; } = Guid.NewGuid();
-    public string FullName { get; private set; }
-    public string Username { get; private set; }
-    public string PasswordHash { get; private set; }
-    public string Email { get; private set; }
-    public Role Role { get; private set; }
-    public Status Status { get; private set; } = Status.Active;
-
-    private User() { } // For EF
-
-    public User(string fullName, string username, string email, string passwordHash, Role role)
+    public class User
     {
-        FullName = fullName;
-        Username = username;
-        Email = email;
-        PasswordHash = passwordHash;
-        Role = role;
-    }
+        public Guid Id { get; private set; } = Guid.NewGuid();
+        public string Username { get; private set; } = string.Empty;
+        public string PasswordHash { get; private set; } = string.Empty;
+        public string Email { get; private set; } = string.Empty;
+        public string Role { get; private set; } = string.Empty;
 
-    public void Suspend() => Status = Status.Suspended;
+        private User() { } // EF Core needs private ctor
+
+        public User(string username, string email, string passwordHash, string role)
+        {
+            Username = username;
+            Email = email;
+            PasswordHash = passwordHash;
+            Role = role;
+        }
+    }
 }
