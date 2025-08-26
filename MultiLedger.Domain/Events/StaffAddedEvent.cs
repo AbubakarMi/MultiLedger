@@ -4,15 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiLedger.Domain.Events;
-
-public class StaffAddedEvent
+// Events/StaffAddedEvent.cs
+namespace MultiLedger.Domain.Events
 {
-    public Guid StaffId { get; }
-    public DateTime OccurredOn { get; } = DateTime.UtcNow;
-
-    public StaffAddedEvent(Guid staffId)
-    {
-        StaffId = staffId;
-    }
+    public record StaffAddedEvent(Guid StaffId, Guid BranchId);
 }
