@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Enums/Permission.cs
 namespace MultiLedger.Domain.Enums
 {
-    class ermission
+    public enum Permission
     {
+        ViewReports,
+        ManageStaff,
+        RecordTransaction
     }
 }

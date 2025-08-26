@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Enums/Role.cs
 namespace MultiLedger.Domain.Enums
 {
-    class Role
+    public enum Role
     {
+        Admin,
+        Manager,
+        Staff
     }
 }

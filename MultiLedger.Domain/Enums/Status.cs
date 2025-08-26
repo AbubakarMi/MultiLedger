@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Enums/Status.cs
 namespace MultiLedger.Domain.Enums
 {
-    class Status
+    public enum Status
     {
+        Active,
+        OnLeave,
+        Terminated
     }
 }

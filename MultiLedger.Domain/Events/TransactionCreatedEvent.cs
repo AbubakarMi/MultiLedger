@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Events/TransactionCreatedEvent.cs
 namespace MultiLedger.Domain.Events
 {
-    class TransactionCreatedEvent
-    {
-    }
+    public record TransactionCreatedEvent(Guid TransactionId, decimal Amount);
 }

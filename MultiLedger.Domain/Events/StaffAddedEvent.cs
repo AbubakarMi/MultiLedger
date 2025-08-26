@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Events/StaffAddedEvent.cs
 namespace MultiLedger.Domain.Events
 {
-    class StaffAddedEvent
-    {
-    }
+    public record StaffAddedEvent(Guid StaffId, Guid BranchId);
 }

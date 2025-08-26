@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// ValueObjects/Email.cs
 namespace MultiLedger.Domain.ValueObjects
 {
-    class Email
-    {
-    }
+    public record Email(string Value);
 }
