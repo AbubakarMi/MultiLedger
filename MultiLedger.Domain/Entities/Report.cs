@@ -5,20 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 // Entities/Report.cs
-namespace MultiLedger.Domain.Entities;
-
-public class Report
+namespace MultiLedger.Domain.Entities
 {
-    public Guid Id { get; private set; } = Guid.NewGuid();
-    public string Title { get; private set; }
-    public string Content { get; private set; }
-    public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
-
-    private Report() { }
-
-    public Report(string title, string content)
+    public class Report
     {
-        Title = title;
-        Content = content;
+        public Guid Id { get; private set; } = Guid.NewGuid();
+        public string Title { get; private set; } = string.Empty;
+        public DateTime GeneratedOn { get; private set; } = DateTime.UtcNow;
+
+        private Report() { }
+
+        public Report(string title)
+        {
+            Title = title;
+        }
     }
 }
