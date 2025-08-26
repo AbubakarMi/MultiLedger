@@ -6,19 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 // Entities/Branch.cs
-namespace MultiLedger.Domain.Entities;
-
-public class Branch
+namespace MultiLedger.Domain.Entities
 {
-    public Guid Id { get; private set; } = Guid.NewGuid();
-    public string Name { get; private set; }
-    public Address Address { get; private set; }
-
-    private Branch() { }
-
-    public Branch(string name, Address address)
+    public class Branch
     {
-        Name = name;
-        Address = address;
+        public Guid Id { get; private set; } = Guid.NewGuid();
+        public string Name { get; private set; } = string.Empty;
+        public string Address { get; private set; } = string.Empty;
+
+        private Branch() { }
+
+        public Branch(string name, string address)
+        {
+            Name = name;
+            Address = address;
+        }
     }
 }
