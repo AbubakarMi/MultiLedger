@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 // Enums/Status.cs
-namespace MultiLedger.Domain.Enums;
-
-public enum Status
+namespace MultiLedger.Domain.Enums
 {
-    Active,
-    OnLeave,
-    Terminated
+    public enum Status
+    {
+        Active,
+        OnLeave,
+        Terminated
+    }
 }
