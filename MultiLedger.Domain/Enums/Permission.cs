@@ -5,14 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 // Enums/Permission.cs
-namespace MultiLedger.Domain.Enums;
-
-[Flags]
-public enum Permission
+namespace MultiLedger.Domain.Enums
 {
-    None = 0,
-    ManageUsers = 1,
-    ManageBranches = 2,
-    RecordTransactions = 4,
-    GenerateReports = 8
+    public enum Permission
+    {
+        ViewReports,
+        ManageStaff,
+        RecordTransaction
+    }
 }
